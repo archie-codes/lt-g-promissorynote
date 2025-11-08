@@ -601,7 +601,7 @@ export default function PromissoryNoteFiller() {
               />
             </div>
 
-            Acknowledgment section
+            {/* Acknowledgment section */}
             {/* BEFORE ME, this ____ day of ________, 20___ in ________________________, */}
             {/* <div className="absolute" style={{ top: "802px", left: "210px" }}>
               <input
