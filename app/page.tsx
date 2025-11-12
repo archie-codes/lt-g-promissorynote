@@ -356,6 +356,8 @@ export default function PromissoryNoteFiller() {
     dayOfSigning: "",
     monthOfSigning: "",
     yearMonth: "",
+    wittness1: "",
+    wittness2: "",
 
     dayAck: "",
     monthAck: "",
@@ -392,7 +394,7 @@ export default function PromissoryNoteFiller() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className=" bg-gray-100">
       {/* Controls */}
       <div className="print:hidden bg-white shadow-sm border-b sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-3 flex gap-3">
@@ -437,11 +439,11 @@ export default function PromissoryNoteFiller() {
               style={{ width: "8.5in", height: "14in" }}
             >
               <Image
-                src="/ltg-promissory.jpg"
+                src="/ltg-promissory-edited17.jpg"
                 alt="Template Background"
                 width={816}
                 height={1344}
-                className="w-full h-full opacity-30"
+                className="w-full h-full opacity-50 relative -top-2"
                 style={{ objectFit: "fill" }}
               />
             </div>
@@ -450,7 +452,7 @@ export default function PromissoryNoteFiller() {
           {/* Fillable Fields - Positioned exactly over template underlines */}
           <div className="relative" style={{ padding: "0.4in 0.5in" }}>
             {/* Top right date: ______, __________, 20__ */}
-            <div className="absolute" style={{ top: "119px", right: "56px" }}>
+            <div className="absolute" style={{ top: "111px", right: "54px" }}>
               <div className="flex items-baseline gap-0">
                 <input
                   type="text"
@@ -480,7 +482,7 @@ export default function PromissoryNoteFiller() {
             </div>
 
             {/* Php ____________ */}
-            <div className="absolute" style={{ top: "152px", left: "125px" }}>
+            <div className="absolute" style={{ top: "143px", left: "125px" }}>
               <input
                 type="text"
                 value={formData.php1}
@@ -491,7 +493,7 @@ export default function PromissoryNoteFiller() {
             </div>
 
             {/* I/we, _________________________, _____________________________, */}
-            <div className="absolute" style={{ top: "189px", left: "183px" }}>
+            <div className="absolute" style={{ top: "178px", left: "183px" }}>
               <input
                 type="text"
                 value={formData.name1}
@@ -500,7 +502,7 @@ export default function PromissoryNoteFiller() {
                 style={{ fontSize: "10pt" }}
               />
             </div>
-            <div className="absolute" style={{ top: "189px", left: "378px" }}>
+            <div className="absolute" style={{ top: "178px", left: "378px" }}>
               <input
                 type="text"
                 value={formData.name2}
@@ -511,7 +513,7 @@ export default function PromissoryNoteFiller() {
             </div>
 
             {/* the sum of _________________________ pesos (Php ____________ ) */}
-            <div className="absolute" style={{ top: "209px", left: "295px" }}>
+            <div className="absolute" style={{ top: "196px", left: "295px" }}>
               <input
                 type="text"
                 value={formData.amount}
@@ -520,7 +522,7 @@ export default function PromissoryNoteFiller() {
                 style={{ fontSize: "10pt" }}
               />
             </div>
-            <div className="absolute" style={{ top: "209px", left: "557px" }}>
+            <div className="absolute" style={{ top: "196px", left: "557px" }}>
               <input
                 type="text"
                 value={formData.phpAmount}
@@ -531,7 +533,7 @@ export default function PromissoryNoteFiller() {
             </div>
 
             {/* ________ percent (_____%) */}
-            <div className="absolute" style={{ top: "228px", left: "92px" }}>
+            <div className="absolute" style={{ top: "214px", left: "92px" }}>
               <input
                 type="text"
                 value={formData.percent1}
@@ -540,7 +542,7 @@ export default function PromissoryNoteFiller() {
                 style={{ fontSize: "10pt" }}
               />
             </div>
-            <div className="absolute" style={{ top: "228px", left: "210px" }}>
+            <div className="absolute" style={{ top: "214px", left: "210px" }}>
               <input
                 type="text"
                 value={formData.percent2}
@@ -551,7 +553,7 @@ export default function PromissoryNoteFiller() {
             </div>
 
             {/* processing fee of Php______, */}
-            <div className="absolute" style={{ top: "248px", left: "645px" }}>
+            <div className="absolute" style={{ top: "232px", left: "645px" }}>
               <input
                 type="text"
                 value={formData.processingFee}
@@ -562,18 +564,18 @@ export default function PromissoryNoteFiller() {
             </div>
 
             {/* Venue: ______________________________ */}
-            <div className="absolute" style={{ top: "453px", left: "216px" }}>
+            <div className="absolute" style={{ top: "422px", left: "220px" }}>
               <input
                 type="text"
                 value={formData.venue}
                 onChange={(e) => updateField("venue", e.target.value)}
-                className="w-56 text-center border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                className="w-52 text-center border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
+                style={{ fontSize: "10pt" }}
               />
             </div>
 
             {/* Promissory Note this _____ day of ____________ in ________________________. */}
-            <div className="absolute" style={{ top: "512px", left: "590px" }}>
+            <div className="absolute" style={{ top: "476px", left: "590px" }}>
               <input
                 type="text"
                 value={formData.dayOfSigning}
@@ -582,7 +584,7 @@ export default function PromissoryNoteFiller() {
                 style={{ fontSize: "10pt" }}
               />
             </div>
-            <div className="absolute" style={{ top: "532px", left: "91px" }}>
+            <div className="absolute" style={{ top: "495px", left: "91px" }}>
               <input
                 type="text"
                 value={formData.monthOfSigning}
@@ -591,7 +593,7 @@ export default function PromissoryNoteFiller() {
                 style={{ fontSize: "10pt" }}
               />
             </div>
-            <div className="absolute" style={{ top: "532px", left: "202px" }}>
+            <div className="absolute" style={{ top: "495px", left: "202px" }}>
               <input
                 type="text"
                 value={formData.yearMonth}
@@ -601,42 +603,62 @@ export default function PromissoryNoteFiller() {
               />
             </div>
 
+            {/* Witnes 1 and 2 */}
+            <div className="absolute" style={{ top: "619px", left: "570px" }}>
+              <input
+                type="text"
+                value={formData.wittness1}
+                onChange={(e) => updateField("wittness1", e.target.value)}
+                className="w-36 text-center border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
+                style={{ fontSize: "10pt" }}
+              />
+            </div>
+            <div className="absolute" style={{ top: "625px", left: "152px" }}>
+              <input
+                type="text"
+                value={formData.wittness2}
+                onChange={(e) => updateField("wittness2", e.target.value)}
+                className="w-36 text-center border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
+                style={{ fontSize: "10pt" }}
+              />
+            </div>
+
             {/* Acknowledgment section */}
             {/* BEFORE ME, this ____ day of ________, 20___ in ________________________, */}
-            {/* <div className="absolute" style={{ top: "802px", left: "210px" }}>
+            {/* <div className="absolute" style={{ top: "791px", left: "241px" }}>
               <input
                 type="text"
                 value={formData.dayAck}
                 onChange={(e) => updateField("dayAck", e.target.value)}
-                className="w-10 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                className="w-8 text-center border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
+                style={{ fontSize: "10pt" }}
               />
             </div>
-            <div className="absolute" style={{ top: "802px", left: "257px" }}>
+            <div className="absolute" style={{ top: "791px", left: "312px" }}>
               <input
                 type="text"
                 value={formData.monthAck}
                 onChange={(e) => updateField("monthAck", e.target.value)}
-                className="w-20 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                className="w-16 text-center border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
+                style={{ fontSize: "10pt" }}
               />
             </div>
-            <div className="absolute" style={{ top: "802px", left: "326px" }}>
+            <div className="absolute" style={{ top: "791px", left: "400px" }}>
               <input
                 type="text"
                 value={formData.yearAck}
                 onChange={(e) => updateField("yearAck", e.target.value)}
-                className="w-10 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                className="w-5 text-center border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
+                style={{ fontSize: "10pt" }}
               />
             </div>
-            <div className="absolute" style={{ top: "802px", left: "370px" }}>
+            <div className="absolute" style={{ top: "791px", left: "440px" }}>
               <input
                 type="text"
                 value={formData.cityAck}
                 onChange={(e) => updateField("cityAck", e.target.value)}
                 className="w-48 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div> */}
 
@@ -647,7 +669,7 @@ export default function PromissoryNoteFiller() {
                 value={formData.name3}
                 onChange={(e) => updateField("name3", e.target.value)}
                 className="w-44 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div>
             <div className="absolute" style={{ top: "821px", left: "426px" }}>
@@ -656,7 +678,7 @@ export default function PromissoryNoteFiller() {
                 value={formData.name4}
                 onChange={(e) => updateField("name4", e.target.value)}
                 className="w-36 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div>
             <div className="absolute" style={{ top: "821px", left: "612px" }}>
@@ -665,7 +687,7 @@ export default function PromissoryNoteFiller() {
                 value={formData.name5}
                 onChange={(e) => updateField("name5", e.target.value)}
                 className="w-36 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div> */}
 
@@ -676,7 +698,7 @@ export default function PromissoryNoteFiller() {
                 value={formData.ctcNo1}
                 onChange={(e) => updateField("ctcNo1", e.target.value)}
                 className="w-36 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div>
             <div className="absolute" style={{ top: "840px", left: "274px" }}>
@@ -685,7 +707,7 @@ export default function PromissoryNoteFiller() {
                 value={formData.ctcNo2}
                 onChange={(e) => updateField("ctcNo2", e.target.value)}
                 className="w-36 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div>
             <div className="absolute" style={{ top: "840px", left: "433px" }}>
@@ -694,7 +716,7 @@ export default function PromissoryNoteFiller() {
                 value={formData.ctcNo3}
                 onChange={(e) => updateField("ctcNo3", e.target.value)}
                 className="w-36 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div> */}
 
@@ -705,7 +727,7 @@ export default function PromissoryNoteFiller() {
                 value={formData.issuedAt1}
                 onChange={(e) => updateField("issuedAt1", e.target.value)}
                 className="w-36 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div>
             <div className="absolute" style={{ top: "859px", left: "207px" }}>
@@ -714,7 +736,7 @@ export default function PromissoryNoteFiller() {
                 value={formData.issuedAt2}
                 onChange={(e) => updateField("issuedAt2", e.target.value)}
                 className="w-36 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div>
             <div className="absolute" style={{ top: "859px", left: "366px" }}>
@@ -723,7 +745,7 @@ export default function PromissoryNoteFiller() {
                 value={formData.issuedAt3}
                 onChange={(e) => updateField("issuedAt3", e.target.value)}
                 className="w-36 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div> */}
 
@@ -734,7 +756,7 @@ export default function PromissoryNoteFiller() {
                 value={formData.dateIssued}
                 onChange={(e) => updateField("dateIssued", e.target.value)}
                 className="w-28 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div>
             <div className="absolute" style={{ top: "878px", left: "133px" }}>
@@ -743,7 +765,7 @@ export default function PromissoryNoteFiller() {
                 value={formData.yearIssued}
                 onChange={(e) => updateField("yearIssued", e.target.value)}
                 className="w-8 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                style={{ fontSize: "11pt" }}
+                style={{ fontSize: "10pt" }}
               />
             </div> */}
 
@@ -756,7 +778,7 @@ export default function PromissoryNoteFiller() {
                   value={formData.docNo}
                   onChange={(e) => updateField("docNo", e.target.value)}
                   className="w-32 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                  style={{ fontSize: "11pt" }}
+                  style={{ fontSize: "10pt" }}
                 />
               </div>
               <div className="mb-1">
@@ -766,7 +788,7 @@ export default function PromissoryNoteFiller() {
                   value={formData.pageNo}
                   onChange={(e) => updateField("pageNo", e.target.value)}
                   className="w-32 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                  style={{ fontSize: "11pt" }}
+                  style={{ fontSize: "10pt" }}
                 />
               </div>
               <div className="mb-1">
@@ -776,7 +798,7 @@ export default function PromissoryNoteFiller() {
                   value={formData.bookNo}
                   onChange={(e) => updateField("bookNo", e.target.value)}
                   className="w-32 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                  style={{ fontSize: "11pt" }}
+                  style={{ fontSize: "10pt" }}
                 />
               </div>
               <div>
@@ -786,7 +808,7 @@ export default function PromissoryNoteFiller() {
                   value={formData.seriesOf}
                   onChange={(e) => updateField("seriesOf", e.target.value)}
                   className="w-8 border-b border-gray-400 print:border-none bg-transparent focus:outline-none focus:border-blue-500"
-                  style={{ fontSize: "11pt" }}
+                  style={{ fontSize: "10pt" }}
                 />
               </div>
             </div> */}

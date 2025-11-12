@@ -120,3 +120,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  @page {
+    size: 21.59cm 35.56cm; /* 8.5 x 14 in */
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
